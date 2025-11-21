@@ -14,7 +14,7 @@
   <img src="capturas/tailwind-icon.png" width="80" alt="Angular Logo">
 </div>
 
-## Práctica 1: Heuristica y Manejo de estilos 
+## Práctica 2: Heuristica y Manejo de estilos 
 
 ### Autor
 
@@ -150,7 +150,7 @@ Usar iconos de "carpeta" para directorios, "papelera" para eliminar, o términos
 ```
 
 ---
-![captura pagina 3](capturas/pag3-control.png.png)
+![captura pagina 3](capturas/pag3-control.png)
 ### 3. 🎮 Control y Libertad del Usuario
 
 #### 📖 **Concepto**
@@ -196,7 +196,7 @@ Funciones de deshacer/rehacer, botones de cancelar, breadcrumbs de navegación, 
 </div>
 ```
 ---
-![captura pagina 4](capturas/pag4-cosistencia.png.png)
+![captura pagina 4](capturas/pag4-cosistencia.png)
 ### 4. 📏 Consistencia y Estándares
 
 #### 📖 **Concepto**
@@ -232,7 +232,7 @@ Usar colores consistentes (rojo para peligro, verde para éxito), ubicar el logo
 ```
 
 ---
-![captura pagina 5](capturas/pag5-prevencion-errores.png.png)
+![captura pagina 5](capturas/pag5-prevencion-errores.png)
 ### 5. 🚫 Prevención de Errores
 
 #### 📖 **Concepto**
@@ -279,7 +279,7 @@ Validación en tiempo real de formularios, confirmaciones para acciones destruct
 ```
 
 ---
-![captura pagina 6](capturas/pag6-reconocimiento.png.png)
+![captura pagina 6](capturas/pag6-reconocimiento.png)
 ### 6. 💭 Reconocimiento en Lugar de Recordar
 
 #### 📖 **Concepto**
@@ -329,215 +329,6 @@ Menús desplegables con opciones visibles, historial de búsquedas, autocompleta
 ```
 
 ---
-![captura pagina 7](capturas/pag1-visibilidad.png)
-### 7. ⚡ Flexibilidad y Eficiencia de Uso
-
-#### 📖 **Concepto**
-Los aceleradores pueden acelerar la interacción para el usuario experto de tal manera que el sistema puede atender tanto a usuarios inexpertos como experimentados.
-
-#### 🎯 **Ejemplo de Aplicación**
-Atajos de teclado, gestos personalizables, macros, o interfaces que se adaptan al nivel de experiencia del usuario.
-
-#### 💡 **Consejos para Mejorar**
-- Implementa atajos de teclado para acciones comunes
-- Permite personalización de la interfaz
-- Ofrece diferentes niveles de complejidad
-- Proporciona acceso rápido a funciones frecuentes
-
-#### ❌ **Ejemplo Mal Aplicado**
-```html
-<!-- Solo una forma de hacer las cosas -->
-<div class="toolbar">
-  <button onclick="copyText()">Copiar</button>
-  <button onclick="pasteText()">Pegar</button>
-  <button onclick="deleteText()">Eliminar</button>
-</div>
-```
-**Problema**: Los usuarios avanzados no pueden trabajar eficientemente.
-
-#### ✅ **Ejemplo Bien Aplicado**
-```html
-<!-- Múltiples formas de interacción -->
-<div class="toolbar">
-  <button onclick="copyText()" title="Copiar (Ctrl+C)">
-    📋 Copiar
-  </button>
-  <button onclick="pasteText()" title="Pegar (Ctrl+V)">
-    📄 Pegar
-  </button>
-  <button onclick="deleteText()" title="Eliminar (Del)">
-    🗑️ Eliminar
-  </button>
-</div>
-
-<!-- Context menu para usuarios avanzados -->
-<div class="context-menu" id="contextMenu">
-  <div onclick="copyText()">Copiar <kbd>Ctrl+C</kbd></div>
-  <div onclick="pasteText()">Pegar <kbd>Ctrl+V</kbd></div>
-  <div onclick="selectAll()">Seleccionar todo <kbd>Ctrl+A</kbd></div>
-</div>
-```
-
----
-![captura pagina 8](capturas/pag1-visibilidad.png)
-### 8. 🎨 Diseño Estético y Minimalista
-
-#### 📖 **Concepto**
-Los diálogos no deben contener información irrelevante o raramente necesaria. Cada unidad extra de información compite con las unidades relevantes de información y disminuye su visibilidad relativa.
-
-#### 🎯 **Ejemplo de Aplicación**
-Interfaces limpias con mucho espacio en blanco, jerarquía visual clara, o mostrar solo las opciones más importantes por defecto.
-
-#### 💡 **Consejos para Mejorar**
-- Elimina elementos innecesarios de la interfaz
-- Usa espacio en blanco efectivamente
-- Agrupa funciones relacionadas
-- Prioriza el contenido más importante
-
-#### ❌ **Ejemplo Mal Aplicado**
-```html
-<!-- Interfaz sobrecargada -->
-<header class="cluttered-header">
-  <img src="logo.png" alt="Logo">
-  <nav>
-    <a href="/">Inicio</a> | <a href="/productos">Productos</a> | 
-    <a href="/servicios">Servicios</a> | <a href="/empresa">Empresa</a> | 
-    <a href="/historia">Historia</a> | <a href="/equipo">Equipo</a> | 
-    <a href="/ubicacion">Ubicación</a> | <a href="/contacto">Contacto</a> |
-    <a href="/blog">Blog</a> | <a href="/noticias">Noticias</a> |
-    <a href="/eventos">Eventos</a> | <a href="/soporte">Soporte</a>
-  </nav>
-  <div class="social-icons">
-    <a href="#">FB</a> <a href="#">TW</a> <a href="#">IG</a> <a href="#">LI</a>
-  </div>
-  <div class="contact-info">
-    Tel: 123-456-789 | Email: info@ejemplo.com | Dir: Calle 123
-  </div>
-</header>
-```
-**Problema**: Demasiada información compite por la atención.
-
-#### ✅ **Ejemplo Bien Aplicado**
-```html
-<!-- Interfaz limpia y enfocada -->
-<header class="clean-header">
-  <div class="header-left">
-    <img src="logo.png" alt="Logo" class="logo">
-  </div>
-  
-  <nav class="main-nav">
-    <a href="/">Inicio</a>
-    <a href="/productos">Productos</a>
-    <a href="/contacto">Contacto</a>
-  </nav>
-  
-  <div class="header-right">
-    <button class="menu-toggle">☰</button>
-  </div>
-</header>
-```
-
----
-
-![captura pagina 9](capturas/pag1-visibilidad.png)
-### 9. 🆘 Ayuda a Usuarios a Reconocer, Diagnosticar y Recuperarse de Errores
-
-#### 📖 **Concepto**
-Los mensajes de error deben expresarse en lenguaje sencillo (sin códigos), indicar precisamente el problema y sugerir constructivamente una solución.
-
-#### 🎯 **Ejemplo de Aplicación**
-Mensajes de error claros con soluciones específicas, validación de campos con instrucciones, o páginas 404 útiles con navegación alternativa.
-
-#### 💡 **Consejos para Mejorar**
-- Usa lenguaje claro y no técnico en los errores
-- Explica exactamente qué salió mal
-- Proporciona pasos específicos para resolver el problema
-- Incluye enlaces o botones de acción relevantes
-
-#### ❌ **Ejemplo Mal Aplicado**
-```html
-<!-- Mensaje de error confuso -->
-<div class="error">
-  Error 422: Unprocessable entity. Validation failed.
-</div>
-```
-**Problema**: Mensaje técnico que no ayuda al usuario a entender qué hacer.
-
-#### ✅ **Ejemplo Bien Aplicado**
-```html
-<!-- Mensaje de error útil -->
-<div class="error-message">
-  <div class="error-icon">⚠️</div>
-  <div class="error-content">
-    <h4>No pudimos procesar tu registro</h4>
-    <p>Por favor revisa los siguientes problemas:</p>
-    <ul>
-      <li>La contraseña debe tener al menos 8 caracteres</li>
-      <li>El email ya está registrado. <a href="/login">¿Quieres iniciar sesión?</a></li>
-    </ul>
-    <button onclick="focusFirstError()">Corregir errores</button>
-  </div>
-</div>
-```
-
----
-
-![captura pagina 10](capturas/pag1-visibilidad.png)
-### 10. 📚 Ayuda y Documentación
-
-#### 📖 **Concepto**
-Aunque es mejor si el sistema se puede usar sin documentación, puede ser necesario proporcionar ayuda y documentación. Tal información debe ser fácil de buscar, enfocada en las tareas del usuario, listar pasos concretos y no ser demasiado extensa.
-
-#### 🎯 **Ejemplo de Aplicación**
-Tooltips contextales, tours guiados para nuevos usuarios, FAQ accesibles, o ayuda integrada en el flujo de trabajo.
-
-#### 💡 **Consejos para Mejorar**
-- Integra la ayuda en el contexto donde se necesita
-- Proporciona búsqueda eficiente en la documentación
-- Usa ejemplos visuales y pasos específicos
-- Mantén la ayuda actualizada con los cambios del sistema
-
-#### ❌ **Ejemplo Mal Aplicado**
-```html
-<!-- Ayuda genérica y descontextualizada -->
-<div class="help-section">
-  <h3>Manual de Usuario</h3>
-  <p>Consulte el manual completo de 200 páginas para aprender a usar el sistema.</p>
-  <a href="/manual.pdf" target="_blank">Descargar Manual (PDF)</a>
-</div>
-```
-**Problema**: Ayuda genérica que no ayuda con tareas específicas.
-
-#### ✅ **Ejemplo Bien Aplicado**
-```html
-<!-- Ayuda contextual y específica -->
-<form>
-  <div class="field-group">
-    <label for="password">
-      Contraseña 
-      <button type="button" class="help-trigger" onclick="showPasswordHelp()">
-        ❓
-      </button>
-    </label>
-    <input type="password" id="password" name="password">
-    
-    <!-- Tooltip contextual -->
-    <div class="tooltip" id="passwordHelp" style="display: none;">
-      <h4>Crear una contraseña segura:</h4>
-      <ul>
-        <li>✅ Mínimo 8 caracteres</li>
-        <li>✅ Incluye mayúsculas y minúsculas</li>
-        <li>✅ Agrega números y símbolos</li>
-        <li>❌ No uses información personal</li>
-      </ul>
-      <button onclick="generatePassword()">Generar contraseña segura</button>
-    </div>
-  </div>
-</form>
-```
-
----
-
 
 ## 📖 Referencias Bibliográficas
 
