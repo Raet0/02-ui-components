@@ -39,7 +39,9 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/02-ui-components/",
+              "deployUrl": "/02-ui-components/"
             },
             "development": {
               "optimization": false,
